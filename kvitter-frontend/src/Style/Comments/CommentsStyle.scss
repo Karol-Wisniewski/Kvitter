@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+.Comments {
+    display: flex;
+    flex-direction: column;
+
+    > .comment-div {
+        margin-left: 30px;
+        background-color: rgb(54, 54, 54);
+        margin-top: 15px;
+        padding: 5px 25px 10px 25px;
+        border-radius: 30px;
+        width: fit-content;
+        max-width: calc(100% - 100px);
+
+        > div {
+            display: flex;
+            height: fit-content;
+
+            > p {
+                margin-top: -7px;
+                margin-left: 5px;
+                font-size: small;
+            }
+
+            > img {
+                align-self: center;
+                border-radius: 100%;
+                margin-right: 5px;
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+            }
+
+            > button {
+                font-family: Capriola;
+                color: white;
+                background: none;
+                border: none;
+                border-radius: 50px;
+                height: 25px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                transition: background-color 0.15s ease-in-out;
+            }
+
+            > button:hover {
+                cursor: pointer;
+                background-color: rgb(80, 80, 80);
+            }
+        }
+
+        > p {
+            margin-top: 0;
+            margin-bottom: 5px;
+            margin-left: 40px;
+            font-size: 12px;
+        }
+    }
+}

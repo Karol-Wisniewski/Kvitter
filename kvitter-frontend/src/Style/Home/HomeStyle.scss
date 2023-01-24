@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+html, body {
+  animation: hide-scroll 2s;
+}
+
+//---------------------------------------ANIMATIONS--------------------------------------
+
+@keyframes right-animate {
+  0% {
+    margin-left: 100%;
+    font-size: 0;
+  }
+  100% {
+    margin-left: 40%;
+    font-size: 30px;
+  }
+}
+
+@keyframes bottom-animate {
+  0% {
+      margin-top: 100%;
+  }
+  100% {
+      margin-top: 80px;
+  }
+}
+
+@keyframes left-animate {
+  0% {
+      margin-right: 100%;
+      font-size: 0;
+  }
+  100% {
+      margin-right: 40%;
+      font-size: 30px;
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes hide-scroll {
+  from,
+  to {
+    overflow: hidden;
+  }
+}
+
+//---------------------------------------HOME--------------------------------------------
+
+.Home {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'Capriola';
+  
+  > .theme-div {
+    margin-top: 30px;
+
+    > .theme-text {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+      border: 1px solid white;
+      height: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: rgba(0, 195, 255, 0.815);
+      min-width: fit-content;
+    }
+  }
+
+  > .theme-div div:nth-child(even) {
+    animation: right-animate 1s ease;
+    margin-left: 40%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  > .theme-div div:nth-child(odd) {
+    animation: left-animate 1s ease;
+    margin-right: 40%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  > .meet-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    animation: bottom-animate 1s ease;
+
+    > .meet-kvitter-div {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      > .logo {
+        height: 50px;
+        width: 50px;
+        animation: zoom-in-zoom-out 0.8s ease;
+        animation-delay: 0.5s;
+      }
+
+      > .meet-p {
+        margin-top: 40px;
+        font-size: 25px;
+      }
+    }
+
+    > .meet-p-bottom {
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    > .link {
+      text-decoration: none;
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border: 1px solid white;
+      width: 20%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 50px;
+      background-color: rgba(0, 195, 255, 0.815);
+      transition: scale 0.1s ease-in-out;
+    }
+
+    > .link-bottom {
+      text-decoration: none;
+      color: white;
+      margin-top: 10px;
+      margin-bottom: 80px;
+      border: 1px solid white;
+      width: 20%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 50px;
+      background-color: rgba(0, 195, 255, 0.815);
+      transition: scale 0.1s ease-in-out;
+    }
+
+    > .link:hover {
+      background-color: rgba(0, 195, 255, 0.89);
+      scale: 1.07;
+    }
+    
+    > .link-bottom:hover {
+      background-color: rgba(0, 195, 255, 0.89);
+      scale: 1.07;
+    } 
+  }
+}
+

@@ -1,0 +1,106 @@
+html, body {
+	margin: 0;
+  background-color: black;
+  margin-left: calc(100vw - 100%);
+  margin-right: calc(-100vw + 100%);
+}
+
+::-webkit-scrollbar { 
+  height: 0;
+  width: 0;
+}
+
+.App {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+  color: white;
+  justify-content: center;
+
+  ::-webkit-file-upload-button {
+    background: rgb(88, 188, 247);
+    color: white;
+    padding: 7px;
+    border-radius: 50px;
+    border: 1px solid white;
+  }
+
+  ::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+
+  header {  
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    font-family: Capriola;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: -3px;
+
+      > .logo {
+        margin-top: 40px;
+        height: 60px;
+        width: 60px;
+      }
+  
+      > button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        padding: 5px;
+        width: 64px;
+        background-color: rgba(0, 195, 255, 0.815);
+        font-family: Capriola;
+        color: white;
+        border: 1px solid white;
+        border-radius: 50px;
+        transition: background-color 0.15s ease-in-out;
+        font-weight: lighter;
+      }
+  
+      > button:hover {
+        cursor: pointer;
+        background-color: rgba(0, 195, 255, 0.993);
+      }
+    }
+  }
+
+  > main {
+    flex-grow: 1;
+    justify-self: center;
+    max-width: 745px;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+
+    @media (min-width: 2200px) {
+      flex-grow: 1;
+      max-width: 1600px;
+    }
+  }
+
+  > footer {
+    position: sticky;
+    min-width: 90px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+
+    > div {
+      width: 70px;
+      height: 100%;
+    }
+  }
+}

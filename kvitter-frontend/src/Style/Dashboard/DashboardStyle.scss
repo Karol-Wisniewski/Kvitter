@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+.Dashboard {
+
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+
+    min-height: 100vh;
+    font-family: Capriola;
+
+    > .br-div {
+        height: 20px;
+        border-bottom: 1px solid grey;
+    }
+
+    > .loading-dash {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    
+        > img {
+            scale: 80%;
+            filter: contrast(110%);
+            animation: rotation 3s infinite linear;
+            object-fit: cover;
+        }
+    }
+}

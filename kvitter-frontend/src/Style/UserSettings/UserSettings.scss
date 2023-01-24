@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+.UserSettings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    > .link {
+        width: 20%;
+
+        > button {
+            color: white;
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 50px;
+            background-color: rgba(0, 195, 255, 0.815);
+            transition: background-color 0.1s ease-in-out;
+            font-family: Capriola;
+        }
+    
+        > button:hover {
+            cursor: pointer;
+            background-color: rgba(0, 195, 255, 0.89);
+        }
+    }
+}

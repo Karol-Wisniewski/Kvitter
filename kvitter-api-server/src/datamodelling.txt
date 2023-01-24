@@ -1,0 +1,34 @@
+
+
+/*
+UUID = String
+
+User {
+	id: UUID UNIQUE,
+	contactEmail: String, //Default: userCredentials.email
+	username: String UNIQUE,
+	firstName: String,
+	lastName: String,
+	profilePictureUrl: String //Default: https://www.nicepng.com/png/detail/933-9332131_profile-picture-default-png.png,
+    dateOfBirth: Date
+}
+
+(User)-[LIKES]->(Post)
+(User)-[FOLLOWS]->(User)
+
+Post {
+	id: UUID UNIQUE,
+	date: Date, String?,
+	content: String
+}
+(Post)-[CREATED_BY]->(User)
+
+UserCredentials {
+	id: UUID UNIQUE,
+	email: String,
+	hashedPassword: String,
+}
+
+(UserCredentials)-[OWNED_BY]->(User)
+
+*/ 
