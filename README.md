@@ -2,7 +2,7 @@
 
 # Frontend:
 
-- JS
+- JavaScript
 - React
 - Redux
 - SCSS
