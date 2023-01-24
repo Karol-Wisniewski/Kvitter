@@ -1,4 +1,4 @@
-# Kvitter - a Twitter-like social media project
+# Kvitter - a Twitter-like social media project, using MQTT and WebSocket for live chat
 
 # Frontend:
 
